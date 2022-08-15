@@ -22,7 +22,7 @@ def get_filename(url):
 
 def download_wallpaper(url):
     response = requests.get(url)
-    path = DL_DIR + "/" + get_filename(url)
+    path = os.path.join(DL_DIR, get_filename(url))
     print(f"Downloading {url}")
     open(path, 'wb').write(response.content)
 
