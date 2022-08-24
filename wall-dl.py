@@ -31,7 +31,8 @@ if len(sys.argv) < 2:
 
 query = sys.argv[1]
 links = get_wallpaper(query)
+os.makedirs("wallpapers", exist_ok=True)
 for link in links:
-    path = os.path.join(get_path(), get_filename(link))
+    path = os.path.join(get_path(), "wallpapers", get_filename(link))
     download_wallpaper(link, path)
 print(f"Downloaded {len(links)} wallpapers")
