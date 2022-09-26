@@ -1,6 +1,5 @@
 import sys
 import requests
-import json
 import os
 
 def get_wallpaper(query):
